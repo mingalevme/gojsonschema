@@ -1,13 +1,22 @@
 # gojsonschema Docker Image
 
-This repo is for "dockerizing" the `https://github.com/xeipuuv/gojsonschema`.
+This repo is "dockerizing" the `https://github.com/xeipuuv/gojsonschema`.
 
-## Building
+# Usage
+
+## Docker Hub
+```sh
+docker run --rm -v "$(pwd):/opt" -w /opt mingalevme/gojsonschema -s test/testdata/schema.json test/testdata/document-valid.json
+```
+
+## Source
+
+### Build
 ```sh
 docker build --target gojsonschema -t gojsonschema .
 ```
 
-## Running
+### Run
 ```sh
 docker run --rm -v "$(pwd):/opt" -w /opt gojsonschema -s test/testdata/schema.json test/testdata/document-valid.json
 ```
