@@ -24,5 +24,5 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.version=$VERSION \
       org.label-schema.schema-version="1.0" \
       org.label-schema.docker.cmd="docker run --rm -v \"$(pwd):/opt\" -w /opt gojsonschema -s test/testdata/schema.json test/testdata/document-valid.json"
-COPY --from=builder /gojsonschema/gojsonschema /gojsonschema
-ENTRYPOINT [ "/gojsonschema" ]
+COPY --from=builder /gojsonschema/gojsonschema /usr/local/bin/gojsonschema
+ENTRYPOINT [ "/usr/local/bin/gojsonschema" ]
