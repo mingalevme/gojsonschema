@@ -20,3 +20,8 @@ docker build --target gojsonschema -t gojsonschema .
 ```sh
 docker run --rm -v "$(pwd):/opt" -w /opt gojsonschema -s test/testdata/schema.json test/testdata/document-valid.json
 ```
+
+Dockerfile
+```sh
+https://github.com/mingalevme/gojsonschema/blob/master/Dockerfile
+```
